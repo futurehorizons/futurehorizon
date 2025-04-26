@@ -22,8 +22,9 @@
 
 # CELL ********************
 
-# Welcome to your new notebook
-# Type here in the cell editor to add code!
+df = spark.read.format("csv").option("header","true").load("Files/order/2019.csv")
+# df now is a Spark DataFrame containing CSV data from "Files/order/2019.csv".
+display(df)
 
 # METADATA ********************
 
