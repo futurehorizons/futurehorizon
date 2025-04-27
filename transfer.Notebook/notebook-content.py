@@ -32,3 +32,41 @@ display(df)
 # META   "language": "python",
 # META   "language_group": "synapse_pyspark"
 # META }
+
+# CELL ********************
+
+import logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+def print_and_log(message, level='INFO'):
+    """
+    Print the specified message and log it with the specified level.
+
+    Args:
+        message (str): The message to be printed and logged.
+        level (str, optional): The log level. Defaults to 'INFO'.
+    """
+    print(message)
+
+    # Mapping log level strings to their corresponding logging functions
+    log_levels = {
+        'INFO': logging.info,
+        'WARNING': logging.warning,
+        'ERROR': logging.error,
+        'CRITICAL': logging.critical
+    }
+
+    # Get the logging function based on the specified level
+    log_func = log_levels.get(level.upper())
+
+    if log_func:
+        log_func(message)
+    else:
+        raise ValueError("Invalid log level specified")
+
+# METADATA ********************
+
+# META {
+# META   "language": "python",
+# META   "language_group": "synapse_pyspark"
+# META }
