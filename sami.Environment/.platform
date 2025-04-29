@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Environment",
+    "displayName": "sami",
+    "description": "Environment"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "4e14a97e-712e-ad04-4d23-0870d1c69df6"
+  }
+}
